@@ -1,0 +1,337 @@
+Validador de Parenteses Balanceados
+
+
+Conversa com o Gemini
+faça 20 exercicios em python do mais facil ao mais dificil
+
+Esta lista de 20 exercícios em Python foi estruturada em quatro níveis de progressão para consolidar desde a sintaxe básica até algoritmos e orientação a objetos.
+
+Nível 1: Básico (Variáveis, Entrada/Saída e Operadores)
+Olá, Mundo Personalizado: Peça o nome e a cidade do usuário e exiba a mensagem: "Olá, [Nome]! Que legal que você mora em [Cidade].".
+
+Calculadora de Gorjeta: Leia o valor total de uma conta de restaurante e a porcentagem de gorjeta desejada. Exiba o valor da gorjeta e o total a pagar formatados com duas casas decimais.
+
+Conversor de Temperatura: Receba uma temperatura em graus Celsius e converta para Fahrenheit (
+F
+=
+C
+×
+1.8
++
+32
+F=C×1.8+32) e Kelvin (
+K
+=
+C
++
+273.15
+K=C+273.15).
+
+Área e Perímetro: Peça a largura e a altura de um retângulo e calcule sua área e seu perímetro.
+
+Par ou Ímpar: Peça um número inteiro ao usuário e informe se ele é par ou ímpar utilizando o operador de módulo (%).
+
+Nível 2: Intermediário I (Condicionais e Laços de Repetição)
+Classificador de Idade: Leia a idade de uma pessoa e classifique-a como: Criança (menor que 12), Adolescente (12 a 17), Adulto (18 a 59) ou Idoso (60 ou mais).
+
+Tabuada Inteligente: Peça um número inteiro e exiba a tabuada dele de 1 a 10 usando um laço for.
+
+Soma até Zero: Crie um programa que peça números continuamente ao usuário até que ele digite 0. Ao final, exiba a soma de todos os números digitados.
+
+Validador de Senha: Defina uma senha fixa no código (ex: "python123"). Peça ao usuário para digitar a senha; se errar, permita tentar novamente até acertar, exibindo "Acesso permitido" no final.
+
+Contador de Vogais: Peça uma frase ao usuário e conte quantas vogais (a, e, i, o, u — considerando maiúsculas e minúsculas) existem nela.
+
+Nível 3: Intermediário II (Estruturas de Dados e Funções)
+Filtro de Pares em Lista: Dada uma lista com 10 números inteiros fornecidos pelo usuário, crie e exiba uma nova lista contendo apenas os números pares.
+
+Verificador de Palíndromo: Crie uma função eh_palindromo(texto) que retorne True se a palavra ou frase for igual de trás para frente (ignorando espaços e letras maiúsculas) e False caso contrário.
+
+Agenda de Contatos (Dicionários): Crie um menu simples em loop onde o usuário possa: (1) Adicionar contato (nome e telefone), (2) Buscar telefone pelo nome, ou (3) Sair.
+
+Frequência de Palavras: Receba um parágrafo de texto e retorne um dicionário onde as chaves são as palavras únicas (em minúsculo) e os valores são a quantidade de vezes que cada palavra aparece.
+
+Sequência de Fibonacci: Escreva uma função fibonacci(n) que retorne uma lista com os n primeiros termos da sequência de Fibonacci.
+
+Nível 4: Avançado (Arquivos, POO e Algoritmos)
+Gerador de Senhas Seguras: Utilizando os módulos random e string, crie uma função que gere uma senha aleatória de tamanho 
+N
+N contendo obrigatoriamente letras maiúsculas, minúsculas, números e símbolos.
+
+Leitor e Analisador de CSV: Crie um script que leia um arquivo .csv contendo colunas produto,quantidade,preco e calcule o faturamento total de cada produto e o faturamento geral.
+
+Sistema Bancário (POO): Crie uma classe ContaBancaria com atributos titular e saldo (iniciando em 0), e métodos depositar(valor), sacar(valor) (impedindo saldo negativo) e extrato().
+
+Validador de Parênteses Balanceados: Escreva uma função que receba uma string contendo apenas os caracteres (, ), {, }, [ e ] e determine se a sequência é válida (ex: "{[()]}" é válida; "{[(])}" é inválida) usando a estrutura de Pilha (Stack).
+
+Buscador de Caminhos (Algoritmo de Busca): Dado um labirinto representado por uma matriz 2D (onde 0 é caminho livre, 1 é parede, S é início e E é saída), implemente um algoritmo (como BFS ou DFS) para encontrar se existe um caminho válido de S até E e imprima as coordenadas do trajeto.
+
+crie as 20 questões com resposta
+
+Aqui estão as soluções comentadas para todos os 20 exercícios propostos, seguindo a mesma ordem de dificuldade.
+
+Nível 1: Básico
+1. Olá, Mundo Personalizado
+
+Python
+nome = input("Digite seu nome: ")
+cidade = input("Digite sua cidade: ")
+print(f"Olá, {nome}! Que legal que você mora em {cidade}.")
+2. Calculadora de Gorjeta
+
+Python
+conta = float(input("Valor da conta (R$): "))
+porcentagem = float(input("Porcentagem da gorjeta (%): "))
+
+gorjeta = conta * (porcentagem / 100)
+total = conta + gorjeta
+
+print(f"Gorjeta: R$ {gorjeta:.2f}")
+print(f"Total a pagar: R$ {total:.2f}")
+3. Conversor de Temperatura
+
+Python
+celsius = float(input("Temperatura em Celsius: "))
+
+fahrenheit = celsius * 1.8 + 32
+kelvin = celsius + 273.15
+
+print(f"Fahrenheit: {fahrenheit:.2f}°F")
+print(f"Kelvin: {kelvin:.2f}K")
+4. Área e Perímetro
+
+Python
+largura = float(input("Largura do retângulo: "))
+altura = float(input("Altura do retângulo: "))
+
+area = largura * altura
+perimetro = 2 * (largura + altura)
+
+print(f"Área: {area} | Perímetro: {perimetro}")
+5. Par ou Ímpar
+
+Python
+numero = int(input("Digite um número inteiro: "))
+
+if numero % 2 == 0:
+    print(f"{numero} é par.")
+else:
+    print(f"{numero} é ímpar.")
+Nível 2: Intermediário I
+6. Classificador de Idade
+
+Python
+idade = int(input("Digite sua idade: "))
+
+if idade < 12:
+    print("Criança")
+elif idade <= 17:
+    print("Adolescente")
+elif idade <= 59:
+    print("Adulto")
+else:
+    print("Idoso")
+7. Tabuada Inteligente
+
+Python
+num = int(input("Digite um número para ver a tabuada: "))
+
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+8. Soma até Zero
+
+Python
+soma = 0
+while True:
+    num = float(input("Digite um número (0 para sair): "))
+    if num == 0:
+        break
+    soma += num
+
+print(f"A soma total é: {soma}")
+9. Validador de Senha
+
+Python
+senha_correta = "python123"
+
+while True:
+    tentativa = input("Digite a senha: ")
+    if tentativa == senha_correta:
+        print("Acesso permitido")
+        break
+    print("Senha incorreta. Tente novamente.")
+10. Contador de Vogais
+
+Python
+frase = input("Digite uma frase: ").lower()
+vogais = "aeiou"
+contador = 0
+
+for letra in frase:
+    if letra in vogais:
+        contador += 1
+
+print(f"A frase possui {contador} vogais.")
+Nível 3: Intermediário II
+11. Filtro de Pares em Lista
+
+Python
+numeros = []
+for i in range(10):
+    n = int(input(f"Digite o {i+1}º número: "))
+    numeros.append(n)
+
+# Usando List Comprehension para filtrar
+pares = [n for n in numeros if n % 2 == 0]
+print(f"Números pares: {pares}")
+12. Verificador de Palíndromo
+
+Python
+def eh_palindromo(texto):
+    limpo = texto.replace(" ", "").lower()
+    return limpo == limpo[::-1]
+
+# Exemplo de uso:
+print(eh_palindromo("A base do teto desaba"))  # True
+13. Agenda de Contatos (Dicionários)
+
+Python
+agenda = {}
+
+while True:
+    opcao = input("\n1-Adicionar | 2-Buscar | 3-Sair: ")
+    if opcao == "1":
+        nome = input("Nome: ")
+        tel = input("Telefone: ")
+        agenda[nome] = tel
+    elif opcao == "2":
+        nome = input("Nome para busca: ")
+        print(f"Telefone: {agenda.get(nome, 'Contato não encontrado.')}")
+    elif opcao == "3":
+        break
+    else:
+        print("Opção inválida.")
+14. Frequência de Palavras
+
+Python
+def contar_palavras(texto):
+    palavras = texto.lower().split()
+    frequencia = {}
+    for p in palavras:
+        frequencia[p] = frequencia.get(p, 0) + 1
+    return frequencia
+
+# Exemplo de uso:
+print(contar_palavras("python é legal e python é poderoso"))
+15. Sequência de Fibonacci
+
+Python
+def fibonacci(n):
+    if n <= 0:
+        return []
+    if n == 1:
+        return [0]
+    
+    seq = [0, 1]
+    while len(seq) < n:
+        seq.append(seq[-1] + seq[-2])
+    return seq
+
+# Exemplo de uso:
+print(fibonacci(8))  # [0, 1, 1, 2, 3, 5, 8, 13]
+Nível 4: Avançado
+16. Gerador de Senhas Seguras
+
+Python
+import random
+import string
+
+def gerar_senha(tamanho=12):
+    if tamanho < 4:
+        raise ValueError("O tamanho mínimo deve ser 4.")
+    
+    # Garante pelo menos um caractere de cada tipo
+    obrigatorios = [
+        random.choice(string.ascii_uppercase),
+        random.choice(string.ascii_lowercase),
+        random.choice(string.digits),
+        random.choice(string.punctuation)
+    ]
+    
+    todos = string.ascii_letters + string.digits + string.punctuation
+    restante = random.choices(todos, k=tamanho - 4)
+    
+    senha_lista = obrigatorios + restante
+    random.shuffle(senha_lista)
+    return "".join(senha_lista)
+
+print(gerar_senha(12))
+17. Leitor e Analisador de CSV
+
+Python
+import csv
+
+# Cria um arquivo de exemplo para o script funcionar
+with open("vendas.csv", "w", newline="", encoding="utf-8") as f:
+    f.write("produto,quantidade,preco\nTeclado,5,150.00\nMouse,10,80.00\nTeclado,2,150.00")
+
+faturamento_produto = {}
+faturamento_geral = 0.0
+
+with open("vendas.csv", "r", encoding="utf-8") as f:
+    leitor = csv.DictReader(f)
+    for linha in leitor:
+        prod = linha["produto"]
+        total_linha = int(linha["quantidade"]) * float(linha["preco"])
+        faturamento_produto[prod] = faturamento_produto.get(prod, 0) + total_linha
+        faturamento_geral += total_linha
+
+print("Por produto:", faturamento_produto)
+print(f"Faturamento Geral: R$ {faturamento_geral:.2f}")
+18. Sistema Bancário (POO)
+
+Python
+class ContaBancaria:
+    def __init__(self, titular):
+        self.titular = titular
+        self.saldo = 0.0
+
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            print(f"Depósito de R$ {valor:.2f} realizado.")
+
+    def sacar(self, valor):
+        if 0 < valor <= self.saldo:
+            self.saldo -= valor
+            print(f"Saque de R$ {valor:.2f} realizado.")
+        else:
+            print("Saldo insuficiente ou valor inválido.")
+
+    def extrato(self):
+        print(f"Titular: {self.titular} | Saldo atual: R$ {self.saldo:.2f}")
+
+# Exemplo de uso:
+conta = ContaBancaria("Ana")
+conta.depositar(500)
+conta.sacar(200)
+conta.extrato()
+19. Validador de Parênteses Balanceados
+
+Python
+def validar_parenteses(s):
+    pilha = []
+    pares = {')': '(', '}': '{', ']': '['}
+    
+    for char in s:
+        if char in pares.values():
+            pilha.append(char)
+        elif char in pares.keys():
+            if not pilha or pilha.pop() != pares[char]:
+                return False
+                
+    return len(pilha) == 0
+
+# Exemplos de uso:
+print(validar_parenteses("{[()]}"))  # True
+print(validar_parenteses("{[(])}"))  # False
